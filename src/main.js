@@ -15,6 +15,7 @@ const apolloClient = new ApolloClient({
   }
 }
 )
+
 const apolloProvider = new VueApollo({
   defaultClient: apolloClient,
 })
@@ -24,3 +25,5 @@ new Vue({
   apolloProvider,
   render: h => h(App),
 }).$mount('#app')
+
+
