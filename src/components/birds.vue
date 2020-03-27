@@ -1,7 +1,7 @@
 <template>
   <div class="pad">
     <ul>
-      <li v-for="kus in birds" :key="kus.id">
+      <li v-for="kus in birds" :key="kus.bilezik">
         <em>{{ kus.isim.toUpperCase() }}</em>  <div class="right">{{ kus.bilezik }}</div> 
       </li>
     </ul>
