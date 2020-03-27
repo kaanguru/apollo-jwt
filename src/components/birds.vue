@@ -1,8 +1,8 @@
 <template>
   <div class="pad">
     <ul>
-      <li v-for="bird in birds" :key="bird.id">
-        <em>{{ bird.isim.toUpperCase() }}</em>  <div class="right">{{ bird.bilezik }}</div> 
+      <li v-for="kus in birds" :key="kus.id">
+        <em>{{ kus.isim.toUpperCase() }}</em>  <div class="right">{{ kus.bilezik }}</div> 
       </li>
     </ul>
   </div>
@@ -13,8 +13,8 @@ import gql from "graphql-tag";
 export default {
   apollo: {
     birds: gql`
-      {
-        birds(where: { Canli: true }, sort: "created_at", limit: 20) {
+      query kuslar {
+        birds(where: { Canli: true }, sort: "created_at", limit: 9) {
           isim
           bilezik
           Anne {
